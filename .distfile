@@ -11,6 +11,7 @@
 
 >${PACKAGE}
 src
+languages
 vendor
 LICENSE
 readme.txt

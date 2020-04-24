@@ -1,5 +1,5 @@
 {
-  "name": "webpane/webpane-wordpress-plugin",
+  "name": "webpane/wordpress-plugin",
   "version": "0.0.1",
   "repositories": [
     {
@@ -9,13 +9,14 @@
   ],
   "autoload": {
     "psr-4": {
-      "Webpane\\WebpaneWordpressPlugin\\": "src/",
-      "Webpane\\WebpaneWordpressPlugin\\Tests\\": "tests/"
+      "Webpane\\WordpressPlugin\\": "src/",
+      "Webpane\\WordpressPlugin\\Tests\\": "tests/"
     }
   },
   "require": {
     "javanile/granular": "*",
-    "symfony/yaml": "^4.3"
+    "league/plates": "v4.0.0-alpha",
+    "pimple/pimple": "~3.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.5.3",

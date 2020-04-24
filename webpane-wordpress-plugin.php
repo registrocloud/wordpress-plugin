@@ -1,24 +1,29 @@
 <?php
-/**
- * @version 0.0.1
- */
 /*
-Plugin Name: Community Fabricator
-Plugin URI: https://github.com/packatron/community-fabricator
+Plugin Name: Webpane WordPress (official plugin)
+Plugin URI: https://github.com/webpane/webpane-wordpress-plugin
 Description: Get a new banana for your split.
-Author: Packatron
+Author: webpane
 Version: 0.0.1
-Author URI: https://github.com/packatron
+Author URI: https://github.com/webpane
 */
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-if (defined('WP_CLI') && WP_CLI) {
-    require_once __DIR__.'/wp-cli.php';
-}
+use Pimple\Container;
+use Webpane\WordpressPlugin\Plugin;
+use Webpane\WordpressPlugin\ManagementPage;
 
-use Packatron\CommunityFabricator\App;
+$container = new Container();
 
-$app = new App();
+$container['tempaltes'] = function ($c) {
+    return League\Plates\Engine::create(__DIR__.'/templates');
+};
 
-$app->run();
+$container[ManagementPage::class] = function ($c) {
+    return new ManagementPage($c['tempaltes']);
+};
+
+$plugin = new Plugin($container);
+
+$plugin->run();

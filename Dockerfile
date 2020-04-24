@@ -1,4 +1,4 @@
-FROM wordpress:5.2.4
+FROM wordpress:5.4.0
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV WP_CLI_CONFIG_PATH=/var/www/html/wp-content/plugins/community-fabricator/wp-cli.yml
@@ -10,5 +10,3 @@ RUN apt-get update && \
     echo '#!/bin/bash\nphp /usr/src/wp-cli.phar --allow-root "$@"' > /usr/local/bin/wp && chmod +x /usr/local/bin/wp && \
     echo '#!/bin/bash\nwp community "$@"' > /usr/local/bin/community && chmod +x /usr/local/bin/community && \
     chmod +x /usr/local/bin/wp && apt-get clean && rm -rf /tmp/* /var/tmp/* && rm -rf /var/lib/apt/lists/*
-
-WORKDIR /app
