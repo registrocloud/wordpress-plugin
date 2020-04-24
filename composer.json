@@ -21,7 +21,8 @@
   "require-dev": {
     "phpunit/phpunit": "^6.5.3",
     "composer/installers": "~1.0",
-    "wpackagist-plugin/loco-translate":"2.3.0"
+    "wpackagist-plugin/loco-translate":"2.3.0",
+    "wpackagist-plugin/advanced-cron-manager":"2.3.10"
   },
   "extra": {
     "installer-paths": {

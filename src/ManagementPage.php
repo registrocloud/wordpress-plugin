@@ -9,8 +9,14 @@ class ManagementPage extends Bindable
      * @var array
      */
     public static $bindings = [
+        'action:admin_init' => 'registerSettings',
         'action:admin_menu' => 'addManagementPage',
     ];
+
+    /**
+     *
+     */
+    protected $templates;
 
     /**
      * ManagementPage constructor.
@@ -19,7 +25,7 @@ class ManagementPage extends Bindable
      */
     public function __construct($tempaltes)
     {
-        $this->tempaltes = $tempaltes;
+        $this->templates = $tempaltes;
     }
 
     /**
@@ -31,10 +37,19 @@ class ManagementPage extends Bindable
     }
 
     /**
+     *
+     */
+    public function registerSettings()
+    {
+        add_option('webpane_secret', 'This is my option value.');
+        register_setting('webpane_options_group', 'webpane_secret', 'myplugin_callback');
+    }
+
+    /**
      * Render page.
      */
     public function render()
     {
-        echo $this->templates->render('management-page', ['name' => 'Jonathan']);
+        echo $this->templates->render('management-page', ['secret' => get_option('webpane_secret')]);
     }
 }

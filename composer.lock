@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bf3f5ef2b55ab96ceb38ef53b8ba495",
+    "content-hash": "629c6c1b4fac4b6b199f0597e714f2d2",
     "packages": [
         {
             "name": "javanile/granular",
@@ -1883,6 +1883,24 @@
                 "validate"
             ],
             "time": "2020-04-18T12:12:48+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-cron-manager",
+            "version": "2.3.10",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-cron-manager/",
+                "reference": "tags/2.3.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-cron-manager.2.3.10.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-cron-manager/"
         },
         {
             "name": "wpackagist-plugin/loco-translate",

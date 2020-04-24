@@ -1,0 +1,14 @@
+<div>
+  <h1>Webpane</h1>
+  <form method="post" action="options.php">
+    <?php settings_fields('webpane_options_group'); ?>
+    <p>Insert your secret code here</p>
+    <table>
+      <tr valign="top">
+        <th scope="row"><label for="webpane_secret">Secret</label></th>
+        <td><input type="text" size="100" id="webpane_secret" name="webpane_secret" value="<?=$v($secret)?>" /></td>
+      </tr>
+    </table>
+    <?php submit_button(); ?>
+  </form>
+</div>
