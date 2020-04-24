@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    build: .
+    environment:
+      - WORDPRESS_DEBUG=1
+      - WORDPRESS_DB_PASSWORD=secret
+    ports:
+      - 22080:80
+    volumes:
+      - ./wp-content:/var/www/html/wp-content:rw
+      - ./theme:/var/www/html/wp-content/themes/community-fabricator:rw
+      - ./:/var/www/html/wp-content/plugins/community-fabricator:rw
+    links:
+      - mysql
+      - adminer
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+    volumes:
+      - mysql:/var/lib/mysql
+
+  adminer:
+    image: javanile/adminer
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+    ports:
+      - 22081:8080
+
+  community-fabricator:
+    build: .
+    command: bash -c "echo prevent default > /dev/null"
+    working_dir: /app
+    user: 1000:1000
+    volumes:
+      - ./:/app
+
+volumes:
+  mysql:

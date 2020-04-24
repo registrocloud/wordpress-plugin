@@ -1,0 +1,35 @@
+{
+  "name": "packatron/community-fabricator",
+  "version": "0.0.1",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Packatron\\CommunityFabricator\\": "src/",
+      "Packatron\\CommunityFabricator\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "javanile/granular": "*",
+    "symfony/yaml": "^4.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5.3",
+    "composer/installers": "~1.0",
+    "wpackagist-plugin/meta-box":"5.2.2",
+    "wpackagist-plugin/wp-front-end-profile":"1.0.0",
+    "wpackagist-plugin/custom-post-type-permalinks":"3.3.1",
+    "wpackagist-plugin/metronet-profile-picture":"2.3.8",
+    "wpackagist-plugin/loco-translate":"2.3.0",
+    "wpackagist-plugin/wp-login-flow":"3.1.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  }
+}

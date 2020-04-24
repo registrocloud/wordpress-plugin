@@ -1,0 +1,9 @@
+community-fabricator/.git/*
+community-fabricator/.idea/*
+community-fabricator/.vscode/*
+community-fabricator/dist/*
+community-fabricator/vendor.bak/*
+community-fabricator/wp-content/*
+community-fabricator/theme/*
+community-fabricator/.zipignore
+community-fabricator/wp-cli.yml
