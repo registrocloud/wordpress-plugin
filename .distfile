@@ -1,9 +1,17 @@
-community-fabricator/.git/*
-community-fabricator/.idea/*
-community-fabricator/.vscode/*
-community-fabricator/dist/*
-community-fabricator/vendor.bak/*
-community-fabricator/wp-content/*
-community-fabricator/theme/*
-community-fabricator/.zipignore
-community-fabricator/wp-cli.yml
+##
+# Distfile for webpane-wordpress-plugin
+#
+# Usage:   curl -sL git.io/dist.sh | bash -
+# Visit:   https://github.com/javanile/dist.sh
+##
+
+&export PACKAGE=webpane-wordpress-plugin
+&export VERSION=$(grep version < ${cwd}/composer.json | head -n 1 | sed 's/.*version//' | tr -d $'\n\r\t ,":=')
+@dist/${PACKAGE}-${VERSION}.zip
+
+>${PACKAGE}
+src
+vendor
+LICENSE
+readme.txt
+webpane-wordpress-plugin.php

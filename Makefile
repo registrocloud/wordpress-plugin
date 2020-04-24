@@ -3,13 +3,13 @@ start:
 	docker-compose up -d wordpress
 
 install:
-	docker-compose run --rm community-fabricator composer install
+	docker-compose run --rm wordpress composer install
 
 update:
-	docker-compose run --rm community-fabricator composer update
+	docker-compose run --rm wordpress composer update
 
 release:
-	docker-compose run --rm community-fabricator ./release.sh
+	docker-compose run --rm wordpress ./release.sh
 
 ps:
 	docker-compose ps

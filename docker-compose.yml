@@ -10,9 +10,9 @@ services:
     ports:
       - 22080:80
     volumes:
+      - ./:/app:rw
       - ./wp-content:/var/www/html/wp-content:rw
-      - ./theme:/var/www/html/wp-content/themes/community-fabricator:rw
-      - ./:/var/www/html/wp-content/plugins/community-fabricator:rw
+      - ./:/var/www/html/wp-content/plugins/webpane-wordpress-plugin:rw
     links:
       - mysql
       - adminer
@@ -30,14 +30,6 @@ services:
       - MYSQL_ROOT_PASSWORD=secret
     ports:
       - 22081:8080
-
-  community-fabricator:
-    build: .
-    command: bash -c "echo prevent default > /dev/null"
-    working_dir: /app
-    user: 1000:1000
-    volumes:
-      - ./:/app
 
 volumes:
   mysql:
