@@ -9,7 +9,7 @@ class ManagementPage extends Bindable
      * @var array
      */
     public static $bindings = [
-        'action:admin_menu' => ['addManagementPage'],
+        'action:admin_menu' => 'addManagementPage',
     ];
 
     /**
@@ -23,7 +23,7 @@ class ManagementPage extends Bindable
     }
 
     /**
-     *
+     * Add management page to admin menu.
      */
     public function addManagementPage()
     {
@@ -31,7 +31,7 @@ class ManagementPage extends Bindable
     }
 
     /**
-     *
+     * Render page.
      */
     public function render()
     {

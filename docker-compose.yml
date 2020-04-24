@@ -13,6 +13,7 @@ services:
       - ./:/app:rw
       - ./wp-content:/var/www/html/wp-content:rw
       - ./:/var/www/html/wp-content/plugins/webpane-wordpress-plugin:rw
+      - ./.cache/composer:/root/.composer/cache/:rw
     links:
       - mysql
       - adminer

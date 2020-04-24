@@ -1,11 +1,8 @@
 .idea/
 .vscode/
-build/
-vendor/
-node_modules/
-theme/node_modules/
-theme/translations.php
-npm-debug.log
+.cache
+!.cache/composer/.gitkeep
 wp-content
 !wp-content/uploads/.gitkeep
 **/.DS_Store
+vendor/
