@@ -35,7 +35,6 @@ class Cron extends Bindable
      */
     public function registerActivationHook()
     {
-        var_Dump("AAAAA");
         if (!wp_next_scheduled('webpane_ping')) {
             wp_schedule_event(time(), 'every-5-minutes', 'webpane_ping');
         }

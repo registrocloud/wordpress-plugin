@@ -17,6 +17,6 @@ class Ping extends Bindable
      */
     public function ping()
     {
-        echo "PING";
+        file_put_contents(__DIR__.'/a.txt', 'AA', FILE_APPEND);
     }
 }

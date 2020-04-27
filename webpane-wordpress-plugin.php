@@ -26,7 +26,6 @@ $container[ManagementPage::class] = function ($c) {
     return new ManagementPage($c['tempaltes']);
 };
 
-$plugin = new Plugin($psrContainer);
-
+$plugin = new Plugin($psrContainer, __FILE__);
 
 $plugin->run();

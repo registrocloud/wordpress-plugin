@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "javanile/granular",
-            "version": "0.0.10",
+            "version": "0.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/javanile/granular.git",
-                "reference": "57df9e09ec07619ff00120157559dcb3d349872d"
+                "reference": "079ffe0c00219a802d8810d61d3f7dbeb209857b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/javanile/granular/zipball/57df9e09ec07619ff00120157559dcb3d349872d",
-                "reference": "57df9e09ec07619ff00120157559dcb3d349872d",
+                "url": "https://api.github.com/repos/javanile/granular/zipball/079ffe0c00219a802d8810d61d3f7dbeb209857b",
+                "reference": "079ffe0c00219a802d8810d61d3f7dbeb209857b",
                 "shasum": ""
             },
             "require": {
@@ -40,7 +40,7 @@
                     "email": "bianco@javanile.org"
                 }
             ],
-            "time": "2019-07-03T23:29:57+00:00"
+            "time": "2020-04-24T07:46:12+00:00"
         },
         {
             "name": "league/plates",
