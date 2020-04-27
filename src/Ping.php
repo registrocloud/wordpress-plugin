@@ -31,9 +31,18 @@ class Ping extends Bindable
     public function ping()
     {
         try {
-            $this->client->request('POST', 'test');
+            $response = $this->client->request('POST', 'v1/ping');
+            $responseText = $response->getBody()->getContents();
+            $responseJson = json_decode($responseText, true);
         } catch (\Throwable $err) {
-            var_dump($err);
+            $responseJson = [
+                'success' => false,
+                'error' => [
+                    'message' => $err->getMessage(),
+                ]
+            ];
         }
+
+        update_option('webpane_ping_log', json_encode($responseJson));
     }
 }

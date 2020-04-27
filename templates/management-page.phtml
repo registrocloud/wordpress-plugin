@@ -8,6 +8,10 @@
         <th scope="row"><label for="webpane_secret">Secret</label></th>
         <td><input type="text" size="100" id="webpane_secret" name="webpane_secret" value="<?=$v($secret)?>" /></td>
       </tr>
+        <tr valign="top">
+            <th scope="row"><label for="webpane_ping_log">Ping log</label></th>
+            <td><pre><code><?=$v($pingLog)?></code></pre></td>
+        </tr>
     </table>
     <?php submit_button(); ?>
   </form>

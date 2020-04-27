@@ -50,6 +50,9 @@ class ManagementPage extends Bindable
      */
     public function render()
     {
-        echo $this->templates->render('management-page', ['secret' => get_option('webpane_secret')]);
+        echo $this->templates->render('management-page', [
+            'secret' => get_option('webpane_secret'),
+            'pingLog' => get_option('webpane_ping_log'),
+        ]);
     }
 }

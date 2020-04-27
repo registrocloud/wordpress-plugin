@@ -30,7 +30,7 @@ $container[ManagementPage::class] = function ($c) {
 
 $container[WebpaneClient::class] = function ($c) {
     return new WebpaneClient([
-        'base_uri' => 'https://webpane.herokuapp.com/api',
+        'base_uri' => 'https://webpane.herokuapp.com/api/',
     ]);
 };
 
