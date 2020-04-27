@@ -1,8 +1,8 @@
 .idea/
 .vscode/
-.cache
+.cache/
 !.cache/composer/.gitkeep
-wp-content
+wp-content/
 !wp-content/uploads/.gitkeep
 **/.DS_Store
 vendor/

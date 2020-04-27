@@ -16,6 +16,7 @@
   "require": {
     "javanile/granular": "*",
     "league/plates": "v4.0.0-alpha",
+    "guzzlehttp/guzzle": "~6.0",
     "pimple/pimple": "^3.3"
   },
   "require-dev": {

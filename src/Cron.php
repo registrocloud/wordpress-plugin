@@ -24,7 +24,7 @@ class Cron extends Bindable
     {
         $schedules['every-5-minutes'] = array(
             'interval' => 5 * 60,
-            'display' => __( 'Every 5 minutes', 'devhub' )
+            'display' => __( 'Every 5 minutes', 'webpane-wordpress-plugin' )
         );
 
         return $schedules;

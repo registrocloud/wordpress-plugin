@@ -23,9 +23,9 @@ class ManagementPage extends Bindable
      *
      * @param $tempaltes
      */
-    public function __construct($tempaltes)
+    public function __construct($templates)
     {
-        $this->templates = $tempaltes;
+        $this->templates = $templates;
     }
 
     /**

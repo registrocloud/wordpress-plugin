@@ -15,8 +15,25 @@ class Ping extends Bindable
     /**
      *
      */
+    protected $client;
+
+    /**
+     * @param $client
+     */
+    public function __construct($client)
+    {
+        $this->client = $client;
+    }
+
+    /**
+     *
+     */
     public function ping()
     {
-        file_put_contents(__DIR__.'/a.txt', 'AA', FILE_APPEND);
+        try {
+            $this->client->request('POST', 'test');
+        } catch (\Throwable $err) {
+            var_dump($err);
+        }
     }
 }
