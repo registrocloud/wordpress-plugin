@@ -16,3 +16,13 @@ vendor
 LICENSE
 readme.txt
 webpane-wordpress-plugin.php
+
+@dist/${PACKAGE}.zip
+
+>${PACKAGE}
+src
+languages
+vendor
+LICENSE
+readme.txt
+webpane-wordpress-plugin.php
